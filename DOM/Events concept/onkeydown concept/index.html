@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Enter your name: " class="inputbtn" onkeydown="
+      if(event.key === 'Enter'){
+       submit();
+    }">
+    <button onclick="submit();">Submit</button>
+    <p class="para"></p>
+
+
+    <script>
+        function submit() {
+            const inputElement = document.querySelector('.inputbtn');
+            let name = inputElement.value;
+
+            const result = document.querySelector('.para');
+            result.innerHTML = `your name is: ${name}`;
+        }
+    </script>
+
+</body>
+
+</html>
