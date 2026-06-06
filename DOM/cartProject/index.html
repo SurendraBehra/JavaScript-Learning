@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick=" showQua();">show Quantity</button>
+    <button onclick="cartQuantity++; common();">Add to Cart</button>
+
+    <button onclick="cartQuantity+=2 ; common();">+2</button>
+    <button onclick="cartQuantity+=3 ; common();">+3</button>
+    <button onclick="cartQuantity+=4 ; common();">+4</button>
+    <button onclick="cartQuantity+=5 ; common();">+5</button>
+    <button onclick="cartQuantity-=2 ; common();">-2</button>
+    <button onclick="cartQuantity-=3 ; common();">-3</button>
+
+    <button onclick="remove();">Remove from Quantity</button>
+  
+    <p class="showQua-para"></p>
+
+<script>
+
+   let cartQuantity = 0;
+
+   function common(){
+   const showQuaPara= document.querySelector('.showQua-para');
+   showQuaPara.innerHTML = `cartQuantity: ${cartQuantity}`;   
+   }
+
+   function showQua(){
+   const showQuaPara= document.querySelector('.showQua-para');
+   showQuaPara.innerHTML = `On your cartQuantity: ${cartQuantity}`;
+   }
+ 
+   function remove(){
+       const showQuaPara= document.querySelector('.showQua-para');
+       cartQuantity = 0;
+       showQuaPara.innerHTML =`Remove cartQuantity: ${cartQuantity}`;   
+   }
+
+
+</script>
+
+</body>
+</html>
