@@ -1,0 +1,23 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dom</title>
+    </head>
+
+    <body>
+
+        <input type="text" class="inputbtn" placeholder="you can write anything here" onkeyup="result();">
+        <p class="js-para"></p>
+
+        <script>
+            function result() {
+                const inputElement = document.querySelector('.inputbtn');
+                document.querySelector('.js-para').innerHTML = inputElement.value;
+            }
+        </script>
+    </body>
+
+    </html>
