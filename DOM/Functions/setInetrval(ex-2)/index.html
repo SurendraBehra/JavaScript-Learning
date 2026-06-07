@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="finish">start</button>
+
+    <script>
+        const finished = document.querySelector(".finish");
+        finished.addEventListener('click', () => {
+            finished.innerHTML = `Loading.....`;
+            setInterval(function () {
+                finished.innerHTML = `finished!.`;
+            }, 2000);
+        })
+    </script>
+</body>
+</html>
