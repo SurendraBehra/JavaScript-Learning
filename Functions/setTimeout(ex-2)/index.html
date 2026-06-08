@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="addding" onclick="add();">Add</button>
+    <button class="remvoing" onclick="remove();">Remove</button>
+
+    <script>
+        let time = 2;
+        setInterval(() => {
+            if (time > 0) {
+                document.title = `(${time})new messages`;
+            }
+            else if (time === 0) {
+                document.title = 'App';
+            }
+        }, 1000);
+
+        function add() {
+            time++;
+        }
+        function remove() {
+            time--;
+        }
+    </script>
+
+</body>
+</html>
